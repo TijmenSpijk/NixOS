@@ -1,19 +1,19 @@
 {config, ...}: {
 
     programs.starship = {
-        enable = true
+        enable = true;
         settings = {
-            character {
+            character = {
                 success_symbol = "[>](bold green)";
                 error_symbol = "[x](bold red)";
                 vimcmd_symbol = "[<](bold green)";
             };    
 
-            git_commit {
+            git_commit = {
                 tag_symbol = " tag ";
             };
 
-            git_status {
+            git_status = {
                 ahead = ">";
                 behind = "<";
                 diverged = "<>";
@@ -21,261 +21,261 @@
                 deleted = "x";
             };
 
-            aws {
+            aws = {
                 symbol = "aws ";
             };
 
-            azure {
+            azure = {
                 symbol = "az ";
             };
 
-            bun {
+            bun = {
                 symbol = "bun ";
             };
 
-            c {
+            c = {
                 symbol = "C ";
             };
 
-            cobol {
+            cobol = {
                 symbol = "cobol ";
             };
 
-            conda {
+            conda = {
                 symbol = "conda ";
             };
 
-            crystal {
+            crystal = {
                 symbol = "cr ";
             };
 
-            cmake {
+            cmake = {
                 symbol = "cmake ";
             };
 
-            daml {
+            daml = {
                 symbol = "daml ";
             };
 
-            dart {
+            dart = {
                 symbol = "dart ";
             };
 
-            deno {
+            deno = {
                 symbol = "deno ";
             };
 
-            dotnet {
+            dotnet = {
                 symbol = ".NET ";
             };
 
-            directory {
+            directory = {
                 read_only = " ro";
             };
 
-            docker_context {
+            docker_context = {
                 symbol = "docker ";
             };
 
-            elixir {
+            elixir = {
                 symbol = "exs ";
             };
 
-            elm {
+            elm = {
                 symbol = "elm ";
             };
 
-            fennel {
+            fennel = {
                 symbol = "fnl ";
             };
 
-            fossil_branch {
+            fossil_branch = {
                 symbol = "fossil ";
             };
 
-            gcloud {
+            gcloud = {
                 symbol = "gcp ";
             };
 
-            git_branch {
+            git_branch = {
                 symbol = "git ";
             };
 
-            golang {
+            golang = {
                 symbol = "go ";
             };
 
-            gradle {
+            gradle = {
                 symbol = "gradle ";
             };
 
-            guix_shell {
+            guix_shell = {
                 symbol = "guix ";
             };
 
-            hg_branch {
+            hg_branch = {
                 symbol = "hg ";
             };
 
-            java {
+            java = {
                 symbol = "java ";
             };
 
-            julia {
+            julia = {
                 symbol = "jl ";
             };
 
-            kotlin {
+            kotlin = {
                 symbol = "kt ";
             };
 
-            lua {
+            lua = {
                 symbol = "lua ";
             };
 
-            nodejs {
+            nodejs = {
                 symbol = "nodejs ";
             };
 
-            memory_usage {
+            memory_usage = {
                 symbol = "memory ";
             };
 
-            meson {
+            meson = {
                 symbol = "meson ";
             };
 
-            nim {
+            nim = {
                 symbol = "nim ";
             };
 
-            nix_shell {
+            nix_shell = {
                 symbol = "nix ";
             };
 
-            ocaml {
+            ocaml = {
                 symbol = "ml ";
             };
 
-            opa {
+            opa = {
                 symbol = "opa ";
             };
 
-            os.symbols {
+            os.symbols = {
                 Alpaquita = "alq ";
-                Alpine = "alp "
-                Amazon = "amz "
-                Android = "andr "
-                Arch = "rch "
-                Artix = "atx "
-                CentOS = "cent "
-                Debian = "deb "
-                DragonFly = "dfbsd "
-                Emscripten = "emsc "
-                EndeavourOS = "ndev "
-                Fedora = "fed "
-                FreeBSD = "fbsd "
-                Garuda = "garu "
-                Gentoo = "gent "
-                HardenedBSD = "hbsd "
-                Illumos = "lum "
-                Linux = "lnx "
-                Mabox = "mbox "
-                Macos = "mac "
-                Manjaro = "mjo "
-                Mariner = "mrn "
-                MidnightBSD = "mid "
-                Mint = "mint "
-                NetBSD = "nbsd "
-                NixOS = "nix "
-                OpenBSD = "obsd "
-                OpenCloudOS = "ocos "
-                openEuler = "oeul "
-                openSUSE = "osuse "
-                OracleLinux = "orac "
-                Pop = "pop "
-                Raspbian = "rasp "
-                Redhat = "rhl "
-                RedHatEnterprise = "rhel "
-                Redox = "redox "
-                Solus = "sol "
-                SUSE = "suse "
-                Ubuntu = "ubnt "
-                Unknown = "unk "
-                Windows = "win "
+                Alpine = "alp ";
+                Amazon = "amz ";
+                Android = "andr ";
+                Arch = "rch ";
+                Artix = "atx ";
+                CentOS = "cent ";
+                Debian = "deb ";
+                DragonFly = "dfbsd ";
+                Emscripten = "emsc ";
+                EndeavourOS = "ndev ";
+                Fedora = "fed ";
+                FreeBSD = "fbsd ";
+                Garuda = "garu ";
+                Gentoo = "gent ";
+                HardenedBSD = "hbsd ";
+                Illumos = "lum ";
+                Linux = "lnx ";
+                Mabox = "mbox ";
+                Macos = "mac ";
+                Manjaro = "mjo ";
+                Mariner = "mrn ";
+                MidnightBSD = "mid ";
+                Mint = "mint ";
+                NetBSD = "nbsd ";
+                NixOS = "nix ";
+                OpenBSD = "obsd ";
+                OpenCloudOS = "ocos ";
+                openEuler = "oeul ";
+                openSUSE = "osuse ";
+                OracleLinux = "orac ";
+                Pop = "pop ";
+                Raspbian = "rasp ";
+                Redhat = "rhl ";
+                RedHatEnterprise = "rhel ";
+                Redox = "redox ";
+                Solus = "sol ";
+                SUSE = "suse ";
+                Ubuntu = "ubnt ";
+                Unknown = "unk ";
+                Windows = "win ";
             };
 
-            package {
+            package = {
                 symbol = "pkg ";
             };
 
-            perl {
+            perl = {
                 symbol = "pl ";
             };
 
-            php {
+            php = {
                 symbol = "php ";
             };
 
-            pijul_channel {
+            pijul_channel = {
                 symbol = "pijul ";
             };
 
-            pulumi {
+            pulumi = {
                 symbol = "pulumi ";
             };
 
-            purescript {
+            purescript = {
                 symbol = "purs ";
             };
 
-            python {
+            python = {
                 symbol = "py ";
             };
 
-            raku {
+            raku = {
                 symbol = "raku ";
             };
 
-            ruby {
+            ruby = {
                 symbol = "rb ";
             };
 
-            rust {
+            rust = {
                 symbol = "rs ";
             };
 
-            scala {
+            scala = {
                 symbol = "scala ";
             };
 
-            spack {
+            spack = {
                 symbol = "spack ";
             };
 
-            solidity {
+            solidity = {
                 symbol = "solidity ";
             };
 
-            status {
+            status = {
                 symbol = "[x](bold red) ";
             };
 
-            sudo {
+            sudo = {
                 symbol = "sudo ";
             };
 
-            swift {
+            swift = {
                 symbol = "swift ";
             };
 
-            terraform {
+            terraform = {
                 symbol = "terraform ";
             };
 
-            zig {
+            zig = {
                 symbol = "zig ";
-            }
+            };
         };
     };
-};
+}
