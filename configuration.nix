@@ -40,7 +40,6 @@
 	cargo
 	dmenu
 	dunst
-	eww
 	exa
 	firefox
 	flameshot

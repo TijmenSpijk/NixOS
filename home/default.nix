@@ -3,6 +3,7 @@
 {
 	imports = [
   		./bspwm
+		./shell
   	];
 
   	# Home Manager needs a bit of information about you and the
