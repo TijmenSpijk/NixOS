@@ -4,7 +4,7 @@
 	];
 
 	# Networking
-	networking.hostname = "nixos-vm";
+	networking.hostName = "nixos-vm";
 	networking.wireless.enable = false;
 	networking.networkmanager.enable = true;
 

@@ -7,7 +7,6 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
       ./system.nix
       ./home/bspwm/bspwm.nix
     ];
