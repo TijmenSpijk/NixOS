@@ -14,24 +14,20 @@
 			bspwm.enable = true;
 		};
 	};
+
 	services.picom = {
 		enable = true;
 		opacityRules = [
 			"80:class_g = 'Alacritty'"
 		];
-		settings.blur = {
-			method = "gaussian";
-			size = 10;
-			deviation = 5.0;
+		settings = {
+			blur = {
+				method = "dual_kawase";
+				size = 10;
+			};
 		};
-	};
-	
-	services.picom.package = pkgs.picom.overrideAttrs(o: {
-		src = pkgs.fetchFromGithub {
-			repo = "picom";
-			owner = "ibhagwan";
-			rev = "44b4970f70d6b23759a61a2b94d9bfb4351b41b1";
-		};
-	});
 
+		fade = true;
+		fadeDelta = 5;
+	};
 }

@@ -16,6 +16,19 @@
     		userName  = "Tijmen van der Spijk";
     		userEmail = "tijmenspijk@gmail.com";
   	};
+	
+	nixpkgs.overlays = [
+		(final: prev: {
+			picom = prev.picom.overrideAttr ( old: {
+				src = prev.fetchFromGithub {
+					owner = "jonaburg";
+					repo = "picom";
+					rev = "56830e885ec84f3ae3ebd1da2edb710e2d16c40f";
+					hash = "";
+				};
+			});
+		})
+	];
 
   	# This value determines the Home Manager release that your
   	# configuration is compatible with. This helps avoid breakage
