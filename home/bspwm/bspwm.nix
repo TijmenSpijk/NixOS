@@ -1,4 +1,4 @@
-{ pkgs, ...}: {
+{ config, lib, pkgs, ...}: {
 	services.xserver = {
 		enable = true;
 		layout = "us";
@@ -25,5 +25,13 @@
 			deviation = 5.0;
 		};
 	};
+	
+	services.picom.package = pkgs.picom.overrideAttrs(o: {
+		src = pkgs.fetchFromGithub {
+			repo = "picom";
+			owner = "ibhagwan";
+			rev = "44b4970f70d6b23759a61a2b94d9bfb4351b41b1";
+		};
+	});
 
 }
