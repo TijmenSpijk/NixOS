@@ -1,6 +1,10 @@
 { config, pkgs, ... } : {
 	programs.bat = {
 		enable = true;
-		theme = "base64";
+		config = {
+			theme = "ansi";
+			style = "header,header-filesize,grid,rule";
+			paging = "never";
+		};
 	};
 }
