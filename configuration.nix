@@ -52,7 +52,6 @@
 		flameshot
 		fontconfig
 		git
-		lxappearance
 		lxsession
 		mangohud
 		nitrogen
