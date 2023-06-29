@@ -54,6 +54,7 @@
 		git
 		lxsession
 		mangohud
+		neofetch
 		nitrogen
 		pavucontrol
 		picom

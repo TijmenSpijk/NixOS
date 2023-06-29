@@ -79,6 +79,8 @@
 			monospace = [ "Meslo LG L Regular Nerd Font Complete Mono" ];
 		};
   	};	
-
+	
+	# Misc
+	security.polkit.enable = true;
 }
 

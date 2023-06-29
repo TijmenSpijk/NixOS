@@ -9,7 +9,7 @@ This github contains all the config file used in **NixOS** to build my systems. 
     - [X] Host seperation
     - [ ] Setup XDG
     - [ ] Setup polkit
-    - [ ] Setup Sound
+    - [X] Setup Sound
 - [X] Alacritty Config
     - [X] Therminal Fonts
     - [X] Theminal Colors
