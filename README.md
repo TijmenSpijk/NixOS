@@ -27,6 +27,9 @@ This github contains all the config file used in **NixOS** to build my systems. 
     - [ ] Extensions
     - [ ] Remote SSH Server
 - [ ] Setup EWW
+    - [ ] Setup Bar
+    - [ ] Setup Powermenu
+    - [ ] Icon Tray
 - [ ] Setup Rofi
 - [ ] Setup Gaming
     - [ ] Steam
