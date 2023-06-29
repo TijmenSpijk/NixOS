@@ -2,6 +2,7 @@
 	imports = [
 		./alacritty.nix
 		./starship.nix
+		./bat.nix
 	];
 
 	home.file.".config/bspwm/bspwmrc".source = ../../.config/bspwmrc;
