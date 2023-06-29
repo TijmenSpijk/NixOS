@@ -3,6 +3,7 @@
 	# Locale
 	# Set your time zone.
   	time.timeZone = "Europe/Amsterdam";
+	location.provider = "geoclue2";
 
   	# Select internationalisation properties.
   	i18n.defaultLocale = "en_US.UTF-8";

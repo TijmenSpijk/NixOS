@@ -1,49 +1,60 @@
 { config, pkgs, ... }: {
 	
-	## X11
-	services.xserver = {
-        	enable = true;
-        	layout = "us";
+	services = {
 
-        	displayManager = {
-            	lightdm.enable = true;
-            	defaultSession = "none+bspwm";
-            	autoLogin.enable = true;
-            	autoLogin.user = "tijmen";
-        	};
+		## X11
+		xserver = {
+        		enable = true;
+        		layout = "us";
 
-        	windowManager = {
-            		bspwm.enable = true;
-        	};
-    	};
+        		displayManager = {
+            		lightdm.enable = true;
+            		defaultSession = "none+bspwm";
+            		autoLogin.enable = true;
+            		autoLogin.user = "tijmen";
+        		};
 
-	## Picom
-    	services.picom = {
-        	enable = true;
-        	opacityRules = [
-            		"80:class_g = 'Alacritty'"
-        	];
-        	settings = {
-            		blur = {
-                		method = "dual_kawase";
-                		size = 10;
-            		};
-        	};
-
-        	fade = true;
-        	fadeDelta = 5;
-    	};
-
-	# Redshift
-
-  	# Enable the OpenSSH daemon.
-  	services.openssh = {
-    		enable = true;
-    		openFirewall = true;
-    		settings = {
-        		PermitRootLogin = "no";
-        		PasswordAuthentication = false;
-        		X11Forwarding = true;
+        		windowManager = {
+            			bspwm.enable = true;
+        		};
     		};
+
+		## Picom
+    		picom = {
+        		enable = true;
+        		opacityRules = [
+            		"80:class_g = 'Alacritty'"
+        		];
+        		settings = {
+            			blur = {
+                			method = "dual_kawase";
+                			size = 10;
+            			};
+        		};
+
+        		fade = true;
+        		fadeDelta = 5;
+    		};
+
+		# Redshift
+		redshift = {
+			enable = true;
+			temperature = {
+				day = 5500;
+				night = 3700;
+			};
+		};
+	
+
+  		# Enable the OpenSSH daemon.
+  		openssh = {
+    			enable = true;
+    			openFirewall = true;
+    			settings = {
+        			PermitRootLogin = "no";
+        			PasswordAuthentication = false;
+        			X11Forwarding = true;
+    			};
+		};
 	};
 }
