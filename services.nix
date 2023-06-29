@@ -65,4 +65,6 @@
     			};
 		};
 	};
+
+	programs.dconf.enable = true;
 }
