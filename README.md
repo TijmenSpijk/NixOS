@@ -7,6 +7,9 @@ This github contains all the config file used in **NixOS** to build my systems. 
     - [X] User
     - [X] Homemanager
     - [X] Host seperation
+    - [ ] Setup XDG
+    - [ ] Setup polkit
+    - [ ] Setup Sound
 - [X] Alacritty Config
     - [X] Therminal Fonts
     - [X] Theminal Colors
@@ -15,7 +18,14 @@ This github contains all the config file used in **NixOS** to build my systems. 
     - [X] Main System Theme => Nordic
     - [X] Cursor Theme => Nordly Cursors
     - [X] Icon Theme => Nordly Icons
+    - [ ] LightDM greeter
+        - [ ] fix wallpaper
 - [ ] Dunst Config
 - [ ] Fix Picom Config
 - [ ] Setup EWW
 - [ ] Setup Rofi
+- [ ] Setup Gaming
+    - [ ] Steam
+    - [ ] Lutris
+    - [ ] Wine
+    - [ ] Proton
