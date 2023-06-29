@@ -22,6 +22,10 @@ This github contains all the config file used in **NixOS** to build my systems. 
         - [ ] fix wallpaper
 - [ ] Dunst Config
 - [ ] Fix Picom Config
+- [ ] Setup VSCode
+    - [ ] Basic Editor
+    - [ ] Extensions
+    - [ ] Remote SSH Server
 - [ ] Setup EWW
 - [ ] Setup Rofi
 - [ ] Setup Gaming
