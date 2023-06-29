@@ -3,11 +3,34 @@
     programs.starship = {
         enable = true;
         settings = {
+	    username = {
+		style_user = "green bold";
+		style_root = "red bold";
+		format = "[$user]($style) ";
+		disabled = false;
+		show_always = true;
+	    };
+
+	    hostname = {
+	    	format = "on [$hostname](bold purple) ";
+		trim_at = ".";
+		disabled = false;
+		ssh_only = false;
+	    };
+
             character = {
                 success_symbol = "[>](bold green)";
                 error_symbol = "[x](bold red)";
                 vimcmd_symbol = "[<](bold green)";
-            };    
+            };
+
+	    directory = {
+	    	truncation_length = 10;
+		truncate_to_repo = true;
+		style = "bold blue";
+                read_only = " ro";
+            };
+
 
             git_commit = {
                 tag_symbol = " tag ";
@@ -67,10 +90,6 @@
 
             dotnet = {
                 symbol = ".NET ";
-            };
-
-            directory = {
-                read_only = " ro";
             };
 
             docker_context = {
