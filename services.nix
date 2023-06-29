@@ -23,25 +23,18 @@
     		picom = {
         		enable = true;
         		opacityRules = [
-            		"80:class_g = 'Alacritty'"
+            			"80:class_g = 'Alacritty'"
         		];
         		settings = {
-            			# Animations
-
-
-
 				# Blur
 				blur = {
                 			method = "dual_kawase";
                 			size = 10;
             			};
 
-				# Corners
-				extraOptions = ''
-					corner-radius = 10;
-				'';
-
 				# Shadows
+
+				# Fade
 
 				
 
