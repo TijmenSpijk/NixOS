@@ -2,7 +2,7 @@
 	
 	services = {
 
-		## X11
+		# X11
 		xserver = {
         		enable = true;
         		layout = "us";
@@ -19,7 +19,7 @@
         		};
     		};
 
-		## Picom
+		# Picom
     		picom = {
         		enable = true;
         		opacityRules = [
