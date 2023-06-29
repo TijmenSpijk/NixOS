@@ -26,10 +26,25 @@
             		"80:class_g = 'Alacritty'"
         		];
         		settings = {
-            			blur = {
+            			# Animations
+
+
+
+				# Blur
+				blur = {
                 			method = "dual_kawase";
                 			size = 10;
             			};
+
+				# Corners
+				extraOptions = ''
+					corner-radius = 10;
+				'';
+
+				# Shadows
+
+				
+
         		};
 
         		fade = true;
