@@ -16,6 +16,25 @@
     		userEmail = "tijmenspijk@gmail.com";
   	};
 	
+	gtk = {
+		enable = true;
+
+		theme = {
+			name = "Nordic";
+			package = pkgs.nordic;
+		};
+
+		iconTheme = {
+			name = "Nordzy";
+			package = pkgs.nordzy-icon-theme;
+		};
+
+		cursorTheme = {
+			name = "Nordzy-cursors";
+			package = pkgs.nordzy-cursor-theme;
+		};
+	};
+
 	nixpkgs.overlays = [
 		(final: prev: {
 			picom = prev.picom.overrideAttr ( old: {
