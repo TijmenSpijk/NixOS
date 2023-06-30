@@ -1,4 +1,5 @@
 #! /bin/sh
+xrandr --output DP-3 --mode 3840x2160 --scale 0.8x0.8
 nitrogen --restore &
 pgrep -x sxhkd > /dev/null || sxhkd &
 

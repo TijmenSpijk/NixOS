@@ -59,6 +59,7 @@
 		pavucontrol
 		picom
 		polkit_gnome
+		spotify-tui
 		starship
 		ranger
 		ripgrep

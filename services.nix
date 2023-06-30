@@ -8,19 +8,19 @@
         		layout = "us";
 
         		displayManager = {
-            		lightdm.enable = true;
-            		defaultSession = "none+bspwm";
-            		autoLogin.enable = true;
-            		autoLogin.user = "tijmen";
+            			lightdm.enable = true;
+            			defaultSession = "none+bspwm";
+            			autoLogin.enable = true;
+            			autoLogin.user = "tijmen";
+				#setupCommands = ''
+				#	${pkgs.xorg.xrandr}/bin/xrandr --output DP-3 --mode 3440x2160 --scale 0.8x0.8 --pos 0x0 --rotate normal
+				#'';
         		};
 
         		windowManager = {
             			bspwm.enable = true;
         		};
 
-			setupCommands = ''
-				${pkgs.xorg.xrandr}/bin/xrandr --output DP-3 --mode 3440x2160 --scale 0.8x0.8 --pos 0x0 --rotate normal
-			'';
     		};
 
 		# Picom
