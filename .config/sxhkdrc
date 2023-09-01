@@ -4,7 +4,7 @@
 
 # program launcher
 super + @space
-	rofi -modi "drun,run" -show drun
+	rofi -modi "drun,run" -show drun -show-icons
 
 # launch terminal emulator
 super + Return

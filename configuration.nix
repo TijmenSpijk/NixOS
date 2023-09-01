@@ -52,6 +52,7 @@
 		flameshot
 		fontconfig
 		git
+		gparted
 		lxsession
 		mangohud
 		neofetch
