@@ -10,7 +10,6 @@
     ./hardware-configuration.nix
     ./services.nix
     ./system.nix
-    ./programs.nix
   ];
 
   # Allow unfree packages
