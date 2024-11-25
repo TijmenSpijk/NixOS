@@ -32,6 +32,7 @@
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.users.tijmen = import ./home;
+              home-manager.extraSpecialArgs = inputs;
             }
             ./configuration.nix
           ];
