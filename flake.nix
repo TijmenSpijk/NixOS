@@ -41,6 +41,7 @@
               home-manager.useUserPackages = true;
               home-manager.users.tijmen = import ./home;
               home-manager.extraSpecialArgs = inputs;
+              home-manager.backupFileExtension = "backup";
             }
             
           ];
