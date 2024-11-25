@@ -13,7 +13,4 @@
     userEmail = "tijmenspijk@gmail.com";
   };
 
-  programs.steam = {
-    enable = true;
-  };
 }

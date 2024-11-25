@@ -40,6 +40,10 @@
   };
 
   # Shell
-	users.defaultUserShell = pkgs.fish;
+  users.defaultUserShell = pkgs.fish;
   programs.fish.enable = true;
+
+  programs.steam = {
+    enable = true;
+  };
 }
