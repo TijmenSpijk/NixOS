@@ -1,41 +1,32 @@
 {
-  description = "NixOS configuration";
-
   inputs = {
-  	nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    	home-manager.url = "github:nix-community/home-manager";
-    	home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    	nixpkgs.follows = "nixos-cosmic/nixpkgs"; # NOTE: change "nixpkgs" to "nixpkgs-stable" to use stable NixOS release
+	nixos-cosmic.url = "github:lilyinstarlight/nixos-cosmic";
+      	home-manager = {
+      		url = "github:nix-community/home-manager/master";
+      		inputs.nixpkgs.follows = "nixpkgs";
+    	};
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, ... }: {
-    	nixosConfigurations = {
-      		nixos-vm = nixpkgs.lib.nixosSystem {
-        		system = "x86_64-linux";
-        		modules = [
-				./hosts/nixos-vm
-          			./configuration.nix
-          			home-manager.nixosModules.home-manager {
-           				home-manager.useGlobalPkgs = true;
-            				home-manager.useUserPackages = true;
-            				home-manager.users.tijmen = import ./home;
-					home-manager.extraSpecialArgs = inputs;
-         			}
-        		];
-     	 	};
-		desktop = nixpkgs.lib.nixosSystem {
-	      		system = "x86_64-linux";
-			modules = [
-				./hosts/desktop
-				./configuration.nix
-				home-manager.nixosModules.home-manager {
-           				home-manager.useGlobalPkgs = true;
-            				home-manager.useUserPackages = true;
-            				home-manager.users.tijmen = import ./home;
-					home-manager.extraSpecialArgs = inputs;
-         			}
-			];
-				
-		};
-    	};
+  outputs = { self, nixpkgs, nixos-cosmic, home-manager, ... }: {
+    nixosConfigurations = {
+      nixos = nixpkgs.lib.nixosSystem {
+        modules = [
+          {
+            nix.settings = {
+              substituters = [ "https://cosmic.cachix.org/" ];
+              trusted-public-keys = [ "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE=" ];
+            };
+          }
+          nixos-cosmic.nixosModules.default
+	  home-manager.nixosModules.home-manager {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.tijmen = import ./home.nix;
+          }
+          ./configuration.nix
+        ];
+      };
+    };
   };
 }
