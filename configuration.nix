@@ -46,6 +46,7 @@
     nixfmt-rfc-style
     ripgrep
     starship
+    steam
     tealdeer
     vim
     vscode
