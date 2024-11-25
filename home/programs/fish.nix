@@ -1,7 +1,6 @@
 { config, pkgs, ... }:
 
 {
-
   programs.fish = {
     enable = true;
     		shellAliases = {
@@ -18,5 +17,4 @@
 						update-home= "cd ~/NixConfig && sudo nix flake update home-manager";
 		};
   };
-
 }

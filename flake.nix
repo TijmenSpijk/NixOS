@@ -1,5 +1,7 @@
 {
   inputs = {
+    nixpkgs.url = "nixpkgs/nixos-unstable";
+
     # Cosmic
     nixpkgs.follows = "nixos-cosmic/nixpkgs"; # NOTE: change "nixpkgs" to "nixpkgs-stable" to use stable NixOS release
     nixos-cosmic.url = "github:lilyinstarlight/nixos-cosmic";
@@ -9,6 +11,9 @@
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # Stylix
+    stylix.url = "github:danth/stylix";
   };
 
   outputs =
@@ -17,6 +22,7 @@
       nixpkgs,
       nixos-cosmic,
       home-manager,
+      stylix,
       ...
     }:
     {
@@ -43,6 +49,9 @@
               home-manager.extraSpecialArgs = inputs;
               home-manager.backupFileExtension = "backup";
             }
+
+            # Stylix
+            stylix.nixosModules.stylix
             
           ];
         };

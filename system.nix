@@ -1,7 +1,6 @@
 { config, pkgs, ... }:
 
 {
-
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -45,5 +44,12 @@
 
   programs.steam = {
     enable = true;
+  };
+
+  stylix = {
+    enable = true;
+    image = "/home/tijmen/Pictures/wallpaper.jpg";
+    polarity = "dark";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/nord.yaml";
   };
 }

@@ -48,6 +48,7 @@
     starship
     steam
     tealdeer
+    vesktop
     vim
     vscode
     wget
