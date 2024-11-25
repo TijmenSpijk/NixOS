@@ -5,10 +5,10 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -47,16 +47,19 @@
     layout = "us";
     variant = "";
   };
-  
+
   services.desktopManager.cosmic.enable = true;
   services.displayManager.cosmic-greeter.enable = true;
-  
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.tijmen = {
     isNormalUser = true;
     description = "tijmen";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
+    packages = with pkgs; [ ];
   };
 
   # Enable automatic login for the user.
@@ -64,30 +67,31 @@
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-  
+
   # Nix Settings
   nix.settings.experimental-features = [
-	"nix-command"
-	"flakes"
+    "nix-command"
+    "flakes"
   ];
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  	wget
-	git
-	vim
-	curl
-	firefox
-	vscode
+    wget
+    git
+    vim
+    curl
+    firefox
+    vscode
+    nixfmt-rfc-style
   ];
 
   # Git
   #programs.git = {
-#	enable = true;
-#	userName = "tijmen";
-#	userEmail = "tijmenspijk@gmail.com";
- # };
+  #	enable = true;
+  #	userName = "tijmen";
+  #	userEmail = "tijmenspijk@gmail.com";
+  # };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
