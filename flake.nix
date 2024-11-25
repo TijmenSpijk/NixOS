@@ -31,7 +31,7 @@
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.users.tijmen = import ./home.nix;
+              home-manager.users.tijmen = import ./home;
             }
             ./configuration.nix
           ];
