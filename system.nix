@@ -51,5 +51,16 @@
     image = ./wallpaper.jpg;
     polarity = "dark";
     base16Scheme = "${pkgs.base16-schemes}/share/themes/nord.yaml";
+    fonts = {
+      monospace = {
+        package = pkgs.nerdfonts.override {
+          fonts = [ "Meslo" ];
+        };
+        name = "MesloLGM Nerd Font Mono";
+      };
+      serif = config.stylix.fonts.monospace;
+      sansSerif = config.stylix.fonts.monospace;
+      emoji = config.stylix.fonts.monospace;
+    };
   };
 }
