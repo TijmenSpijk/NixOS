@@ -53,12 +53,21 @@
     base16Scheme = "${pkgs.base16-schemes}/share/themes/nord.yaml";
     fonts = {
       monospace = {
-        package = pkgs.nerdfonts.Meslo;
-        name = "MesloLGM Nerd Font Mono";
+        package = pkgs.nerd-fonts.meslo-lg;
+        name = "MesloLG Nerd Font Mono";
       };
-      serif = config.stylix.fonts.monospace;
-      sansSerif = config.stylix.fonts.monospace;
-      emoji = config.stylix.fonts.monospace;
+      serif = {
+        package = pkgs.nerd-fonts.meslo-lg;
+        name = "MesloLG Nerd Font";
+      };
+      sansSerif = {
+        package = pkgs.nerd-fonts.meslo-lg;
+        name = "MesloLG Nerd Font";
+      };
+      emoji  = {
+        package = pkgs.nerd-fonts.meslo-lg;
+        name = "MesloLG Nerd Font";
+      };
     };
   };
 }
