@@ -5,7 +5,8 @@
     # Cosmic
     nixpkgs.follows = "nixos-cosmic/nixpkgs"; # NOTE: change "nixpkgs" to "nixpkgs-stable" to use stable NixOS release
     nixos-cosmic.url = "github:lilyinstarlight/nixos-cosmic";
-    
+
+    zen-browser.url = "github:MarceColl/zen-browser-flake";
     # Home Manager
     home-manager = {
       url = "github:nix-community/home-manager/master";
@@ -16,18 +17,21 @@
     stylix.url = "github:danth/stylix";
   };
 
-  outputs =
-    inputs@{
+  outputs = {
       self,
       nixpkgs,
       nixos-cosmic,
       home-manager,
       stylix,
+      zen-browser,
       ...
-    }:
+    } @ inputs:
     {
       nixosConfigurations = {
         nixos = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          specialArgs = { inherit inputs; };
+
           modules = [
             ./configuration.nix
 
@@ -37,7 +41,7 @@
                 substituters = [ "https://cosmic.cachix.org/" ];
                 trusted-public-keys = [ "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE=" ];
               };
-            }            
+            }
             nixos-cosmic.nixosModules.default
 
             # Home Manager
@@ -46,13 +50,13 @@
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.users.tijmen = import ./home;
-              home-manager.extraSpecialArgs = inputs;
+              home-manager.extraSpecialArgs = {inherit inputs; system = "x86_64-linux";};
               home-manager.backupFileExtension = "backup";
             }
 
             # Stylix
             stylix.nixosModules.stylix
-            
+
           ];
         };
       };
