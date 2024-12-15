@@ -50,7 +50,7 @@
     tealdeer
     vesktop
     vim
-    vscode
+    zed-editor
     wget
   ];
 

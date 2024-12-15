@@ -53,9 +53,7 @@
     base16Scheme = "${pkgs.base16-schemes}/share/themes/nord.yaml";
     fonts = {
       monospace = {
-        package = pkgs.nerdfonts.override {
-          fonts = [ "Meslo" ];
-        };
+        package = pkgs.nerdfonts.Meslo;
         name = "MesloLGM Nerd Font Mono";
       };
       serif = config.stylix.fonts.monospace;
