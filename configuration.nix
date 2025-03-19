@@ -36,7 +36,9 @@
     btop
     cargo
     curl
+    discord
     eza
+    firefox
     fish
     git
     mangohud
@@ -46,7 +48,6 @@
     starship
     steam
     tealdeer
-    vesktop
     vim
     zed-editor
     wget
