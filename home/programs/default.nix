@@ -12,5 +12,4 @@
     userName = "Tijmen van der Spijk";
     userEmail = "tijmenspijk@gmail.com";
   };
-
 }
