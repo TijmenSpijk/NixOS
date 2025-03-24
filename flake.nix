@@ -5,7 +5,7 @@
     # Cosmic
     nixpkgs.follows = "nixos-cosmic/nixpkgs"; # NOTE: change "nixpkgs" to "nixpkgs-stable" to use stable NixOS release
     nixos-cosmic.url = "github:lilyinstarlight/nixos-cosmic";
-
+    # Zen Browser
     zen-browser.url = "github:MarceColl/zen-browser-flake";
     # Home Manager
     home-manager = {

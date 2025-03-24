@@ -41,6 +41,7 @@
     firefox
     fish
     git
+    gcc
     mangohud
     neofetch
     nixfmt-rfc-style
@@ -51,6 +52,7 @@
     vim
     zed-editor
     wget
+    wireguard-tools
     inputs.zen-browser.packages."${system}".default
   ];
 
