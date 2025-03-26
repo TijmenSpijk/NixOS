@@ -45,6 +45,7 @@
     mangohud
     neofetch
     nixfmt-rfc-style
+    prismlauncher
     ripgrep
     starship
     steam
