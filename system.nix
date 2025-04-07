@@ -42,10 +42,6 @@
   users.defaultUserShell = pkgs.fish;
   programs.fish.enable = true;
 
-  programs.steam = {
-    enable = true;
-  };
-
   stylix = {
     enable = true;
     image = ./wallpaper.jpg;

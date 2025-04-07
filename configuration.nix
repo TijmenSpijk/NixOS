@@ -52,6 +52,7 @@
     steam
     tealdeer
     vim
+    vscode
     zed-editor
     wget
     wireguard-tools
