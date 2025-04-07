@@ -35,6 +35,7 @@
     bat
     btop
     cargo
+    cobalt
     curl
     discord
     eza
