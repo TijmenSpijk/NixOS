@@ -5,6 +5,7 @@
     ./bat.nix
     ./fish.nix
     ./starship.nix
+    ./vscode.nix
   ];
 
   programs.git = {
