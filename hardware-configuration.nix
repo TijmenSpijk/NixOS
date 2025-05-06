@@ -11,7 +11,12 @@
   boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usbhid" "sd_mod" ];
   boot.initrd.kernelModules = [ "dm-snapshot" ];
   boot.kernelModules = [ "kvm-amd" ];
+  boot.kernelPackages = pkgs.linuxPackages;
   boot.extraModulePackages = [ ];
+
+  hardware.graphics = {
+    extraPackages = [ pkgs.amdvlk ];
+  };
 
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/5bb9b5c1-75c0-4090-8122-f244514ba958";

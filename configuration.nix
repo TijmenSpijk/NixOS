@@ -44,6 +44,7 @@
     git
     gcc
     mangohud
+    mesa
     neofetch
     nixfmt-rfc-style
     prismlauncher
@@ -58,6 +59,8 @@
     wireguard-tools
     inputs.zen-browser.packages."${system}".default
   ];
+
+  programs.steam.extraCompatPackages = with pkgs; [ proton-ge-bin ];
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
